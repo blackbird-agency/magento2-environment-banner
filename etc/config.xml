@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <environmentbanner>
+            <environments>
+                <environments>
+                    <![CDATA[{"_1674230961423_423":{"env":"production","fe_bgcolor":"#7a0200","be_color":"#7a0200"},"_1677841390417_417":{"env":"development","fe_bgcolor":"#005600","be_color":"#005600"},"_1677841413843_843":{"env":"staging","fe_bgcolor":"#d45d12","be_color":"#994100"},"_1677841435891_891":{"env":"preview","fe_bgcolor":"#7c43bf","be_color":"#513180"}}]]>
+                </environments>
+            </environments>
+            <admin>
+                <display_env>0</display_env>
+                <colour_change>1</colour_change>
+            </admin>
+            <frontend>
+                <enabled>0</enabled>
+            </frontend>
+        </environmentbanner>
+    </default>
+</config>

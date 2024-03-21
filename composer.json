@@ -1,0 +1,21 @@
+{
+    "name": "blackbird/module-environment-banner",
+    "description": "Magento 2 extension. Tell at a glance if you are in a production, staging or dev environment - visual banners on frontend and admin",
+    "type": "magento2-module",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "php": "~5.5.0|~5.6.0|>7|>8",
+        "magento/magento-composer-installer": "*",
+        "magento/framework": "*",
+        "zepgram/magento-dotenv": "^2.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Blackbird\\EnvironmentBanner\\": ""
+        }
+    }
+}

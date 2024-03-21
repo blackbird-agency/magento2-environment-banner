@@ -1,0 +1,68 @@
+<?php
+$envHelper = $this->_helper;
+$env = $envHelper->getEnvironment();
+$cols = $envHelper->getEnvColours();
+?>
+
+<?php if ($envHelper->isDisplayAdminBanner()): ?>
+<style type="text/css">
+    h2.env {
+        float: left;
+        margin-top: 13px;
+        color: white;
+    }
+
+    .ribbon-wrapper {
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 10000;
+    }
+
+    .ribbon-inner {
+        font: bold 18px Sans-Serif;
+        color: rgba(255,255,255,0.5);
+        text-align: center;
+        text-shadow:     #333 0px 1px 0px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        position: relative;
+        padding: 20px 0px;
+        left: 3px;
+        top: 22px;
+        width: 210px;
+        opacity: 0.9;
+    }
+    .ribbon-inner.<?php echo $env ?> {
+        background-color: <?php echo $cols->getBeColor() ?>;
+        color: <?php echo $cols->getBeBgColor() ?>;
+    }
+
+    @media all and (max-width: 768px) {
+        .ribbon-inner {
+
+            display:none;
+        }
+
+        .ribbon-inner {
+
+            display:none;
+        }
+
+
+    }
+</style>
+
+<div class="ribbon-wrapper" onclick="document.getElementById('envbanner').style.display = 'none';
+                                     document.getElementById('ebtop').style.display = 'none';
+                                     document.getElementById('ebbottom').style.display = 'none';
+                                     document.getElementById('ebleft').style.display = 'none';
+                                     document.getElementById('ebright').style.display = 'none';
+                                     " id="envbanner"><div class="ribbon-inner <?php echo $env ?>" title="click to hide"><?= $env ? ucfirst($env) : ''; ?></div>
+</div>
+<?php endif;?>
