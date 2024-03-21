@@ -3,7 +3,7 @@
     "description": "Magento 2 extension. Tell at a glance if you are in a production, staging or dev environment - visual banners on frontend and admin",
     "type": "magento2-module",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
         "php": "~5.5.0|~5.6.0|>7|>8",
         "magento/magento-composer-installer": "*",
