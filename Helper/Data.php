@@ -172,10 +172,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper {
      */
     public function getEnvironment()
     {
-        if (!isset($_ENV['APP_ENV'])) {
-            return null;
-        }
 
-        return $_ENV['APP_ENV'];
+        return $this->scopeConfig->getValue('environment') ?? null;
     }
 }

@@ -7,8 +7,7 @@
     "require": {
         "php": "~5.5.0|~5.6.0|>7|>8",
         "magento/magento-composer-installer": "*",
-        "magento/framework": "*",
-        "zepgram/magento-dotenv": "^2.0"
+        "magento/framework": "*"
     },
     "autoload": {
         "files": [

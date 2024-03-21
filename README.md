@@ -1,4 +1,4 @@
-# Environment banner &nbsp; [![Latest Stable Version](https://img.shields.io/badge/version-1.0.0-red)](https://packagist.org/packages/blackbird/module-environment-banner) [![License: MIT](https://img.shields.io/github/license/blackbird-agency/module-environment-banner.svg)](./LICENSE)
+# Environment banner &nbsp; [![Latest Stable Version](https://img.shields.io/badge/version-1.0.0-violet)](https://packagist.org/packages/blackbird/module-environment-banner) [![License: MIT](https://img.shields.io/github/license/blackbird-agency/magento2-environment-banner?logo=github&color=salmon)](./LICENSE) [![Download count](https://img.shields.io/packagist/dt/blackbird/module-environment-banner?color=aqua)]()
 
 Magento 2 extension that provides a quick visual indication of the environment (production, staging, or development) you are currently in, with banners displayed on both the frontend and admin areas.
 
@@ -26,16 +26,22 @@ composer require blackbird/module-environment-banner
 php bin/magento setup:upgrade
 ```
 
-3. Add the environment to the `.env` file. The value should match the ones defined in the configuration.
+3. Configure the extension in the Magento admin panel under `Stores > Configuration > Advanced > Environment Banner`. Fill the environment mapping.
 
-```dotenv
-APP_ENV=development
+4. Add the environment to the `app/etc/env.php` file. **The value should match one from the mapping.**
+
+```php
+[
+    'system' => [
+        'default' => [
+            'environment' => 'development',
+        ],
+    ],
+];
 ```
-
-4. Configure the extension in the Magento admin panel under `Stores > Configuration > Advanced > Environment Banner`.
 
 ## About this fork
 
 This extension is a fork of the original [c3limited/magento2-environment-banner](https://github.com/c3limited/magento2-environment-banner) module. While the original module provided valuable functionality, it had limitations such as compatibility only with Apache servers and absence from Packagist. In our fork, we have addressed these limitations and made enhancements for broader compatibility, including support for Nginx and other web servers.
 
-**Notably, instead of relying on server configuration, as in the original module, our fork utilizes the .env file for environment configuration, offering greater flexibility and ease of use.**
+**Notably, instead of relying on server configuration, as in the original module, our fork utilizes the `env.php` file for environment configuration, offering greater flexibility and ease of use.**
