@@ -6,7 +6,11 @@
         <environmentbanner>
             <environments>
                 <environments>
-                    <![CDATA[{"_1674230961423_423":{"env":"production","fe_bgcolor":"#7a0200","be_color":"#7a0200"},"_1677841390417_417":{"env":"development","fe_bgcolor":"#005600","be_color":"#005600"},"_1677841413843_843":{"env":"staging","fe_bgcolor":"#d45d12","be_color":"#994100"},"_1677841435891_891":{"env":"preview","fe_bgcolor":"#7c43bf","be_color":"#513180"}}]]>
+                    <![CDATA[{
+                        "0":{"env":"prod","fe_bgcolor":"#7a0200","be_color":"#7a0200"},
+                        "1":{"env":"preprod","fe_bgcolor":"#994100","be_color":"#994100"},
+                        "2":{"env":"local","fe_bgcolor":"#005600","be_color":"#005600"}
+                    }]]>
                 </environments>
             </environments>
             <admin>
